@@ -34,10 +34,12 @@ def downloader(url):
 		f.write(re.content)
 		f.close()
 
-if not sys.argv[1]:
-	print("enter a url from which to get images, say http://www.blah.com or https://ww.blah.com along with the file name, ie python3 download_images.py http://blah.com ")
-else:
-	downloader(sys.argv[1])
+if __name__ == '__main__':		
+	if len(sys.argv) < 2:
+		print("enter a url from which to get images, say http://www.blah.com or https://ww.blah.com along with the file name, ie python3 download_images.py http://blah.com ")
+	else:
+		downloader(sys.argv[1])
 
 
 
+	
